@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 60 7% 94%;
+    --foreground: 32 25% 28%;
+    --card: 0 0% 100%;
+    --card-foreground: 32 25% 28%;
+    --popover: 60 13% 97%;
+    --popover-foreground: 32 25% 28%;
+    --primary: 32 25% 28%;
+    --primary-foreground: 60 13% 97%;
+    --secondary: 60 6% 88%;
+    --secondary-foreground: 32 25% 28%;
+    --muted: 60 6% 90%;
+    --muted-foreground: 31 16% 46%;
+    --accent: 31 24% 34%;
+    --accent-foreground: 60 13% 97%;
+    --destructive: 8 45% 50%;
+    --destructive-foreground: 60 13% 97%;
+    --border: 38 14% 85%;
+    --input: 38 14% 85%;
+    --ring: 32 25% 28%;
+    --progress-track: 60 8% 88%;
+    --radius: 0.9rem;
+    --font-heading: 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif;
+    --font-body: 'Inter', ui-sans-serif, system-ui, sans-serif;
+    --font-display: 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif;
+    --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
+    --moss: 96 24% 54%;
+    --terracotta: 21 44% 65%;
+    --peach: 20 45% 81%;
+    --sage: 101 31% 81%;
+    --taupe: 28 19% 54%;
+    --dot: 34 8% 64%;
+    --stone-dark: 27 4% 43%;
+    --stone: 34 8% 64%;
+    --stone-brown: 34 19% 43%;
+  }
+
+  .dark {
+    --background: 32 18% 13%;
+    --foreground: 0 0% 100%;
+    --card: 34 16% 17%;
+    --card-foreground: 20 30% 90%;
+    --popover: 34 16% 17%;
+    --popover-foreground: 20 30% 90%;
+    --primary: 30 22% 58%;
+    --primary-foreground: 32 18% 13%;
+    --secondary: 28 14% 22%;
+    --secondary-foreground: 20 30% 90%;
+    --muted: 30 14% 20%;
+    --muted-foreground: 28 12% 66%;
+    --accent: 21 40% 55%;
+    --accent-foreground: 20 30% 90%;
+    --destructive: 8 50% 58%;
+    --destructive-foreground: 18 26% 90%;
+    --border: 30 14% 24%;
+    --input: 30 14% 24%;
+    --ring: 30 22% 58%;
+
+    --moss: 100 28% 60%;
+    --terracotta: 21 48% 68%;
+    --peach: 20 35% 32%;
+    --sage: 101 26% 38%;
+    --taupe: 28 14% 66%;
+    --dot: 34 8% 64%;
+    --stone-dark: 27 4% 43%;
+    --stone: 34 8% 64%;
+    --stone-brown: 34 19% 43%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-display;
+  }
+}
+
+@layer utilities {
+  .no-scrollbar {
+    scrollbar-width: none;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .pb-safe {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+  .pt-safe {
+    padding-top: env(safe-area-inset-top);
+  }
+}
