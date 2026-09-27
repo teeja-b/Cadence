@@ -1,4 +1,4 @@
-=import { db } from "@/api/client";
+import { db } from "@/api/client";
 
 import { useEffect, useState } from "react";
 import { format } from "date-fns";
